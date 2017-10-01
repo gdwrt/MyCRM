@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mycrm.business.ClienteBusiness;
 import com.mycrm.entity.Cliente;
+import com.mycrm.facade.ClienteFacade;
 
 /**
  * Servlet para listagem dos Clientes registrados na base de dados.
@@ -31,7 +31,7 @@ public class ListarClientesServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ClienteBusiness controller = new ClienteBusiness();
+		ClienteFacade controller = new ClienteFacade();
 		List<Cliente> lista = controller.listar();
 		
 		request.setAttribute("listaClientes", lista);

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mycrm.business.ClienteBusiness;
+import com.mycrm.facade.ClienteFacade;
 
 /**
  * Servlet implementation class AlterarClienteServlet
@@ -33,7 +33,7 @@ public class ExcluirClienteServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		Integer id = Integer.parseInt(request.getParameter("id")); 
 		
-		ClienteBusiness c = new ClienteBusiness();
+		ClienteFacade c = new ClienteFacade();
 		
 		c.excluir(id);
 		

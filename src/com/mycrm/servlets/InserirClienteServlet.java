@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mycrm.business.ClienteBusiness;
+import com.mycrm.facade.ClienteFacade;
 
 /**
  * Servlet implementation class InserirClienteServlet
@@ -22,7 +22,7 @@ public class InserirClienteServlet extends HttpServlet {
      
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		ClienteBusiness control = new ClienteBusiness();
+		ClienteFacade control = new ClienteFacade();
 		
 		//Obter parãmetros do formulário
 		String nomeCompleto = request.getParameter("nomeCompleto");

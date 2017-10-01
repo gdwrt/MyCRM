@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mycrm.business.ClienteBusiness;
+import com.mycrm.facade.ClienteFacade;
 
 /**
  * Servlet implementation class AlterarClienteServlet
@@ -33,7 +33,7 @@ public class AlterarClienteServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		Integer id = Integer.parseInt(request.getParameter("id"));
 		
-		 new ClienteBusiness().listar().forEach(c ->{
+		 new ClienteFacade().listar().forEach(c ->{
 			 if(c.getId() == id)
 				 request.setAttribute("cliente", c);
 			 

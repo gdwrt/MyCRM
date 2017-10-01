@@ -1,4 +1,4 @@
-package com.mycrm.business;
+package com.mycrm.facade;
 
 import java.util.List;
 
@@ -6,11 +6,11 @@ import com.mycrm.dao.FactoryDao;
 import com.mycrm.dao.InterfaceDao;
 import com.mycrm.entity.Cliente;
 
-public class ClienteBusiness {
+public class EmpregadorFacade {
 	private InterfaceDao<Cliente> dao;
 	private Cliente c;
 	
-	public ClienteBusiness(){
+	public EmpregadorFacade(){
 		dao = FactoryDao.createClienteDao();
 		
 	}
